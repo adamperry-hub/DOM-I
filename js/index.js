@@ -83,37 +83,80 @@ const image = document.querySelector('.cta img');
 // console.log(image);
 
 image.setAttribute('src', siteContent['cta']['img-src']);
+const topContent = document.querySelector('.top-content');
+// topContent[0][0].textContent = siteContent["main-content"]["features-h4"];
 
-const topC = document.querySelector('.top-content');
+const firstTop = topContent.childNodes[1];
+const secondTop = topContent.childNodes[3];
 
-const topFirstCard = topC.childNodes[1] // div text content
-// console.log(topFirstCard)
+firstTop.children[0].textContent = siteContent["main-content"]["features-h4"];
+firstTop.children[1].textContent = siteContent["main-content"]["features-content"];
 
-const topContent1 = topFirstCard.children[0] // h4
-// console.log(topContent1);
-// .textContent logic in HERE
-topContent1.textContent = siteContent["main-content"]["features-h4"];
-// console.log(topFirstCard);
+secondTop.children[0].textContent = siteContent["main-content"]["about-h4"];
+secondTop.children[1].textContent = siteContent["main-content"]["about-content"];
 
-const topContent2 = topFirstCard.children[1]
-topContent2.textContent = siteContent["main-content"]["features-content"];
-// p
-// ,textContent logic in HERE
+const middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+const bottomContent = document.querySelector('.bottom-content');
+// console.log(bottomContent.childNodes);
+
+const firstBottom = bottomContent.childNodes[1];
+const secondBottom = bottomContent.childNodes[3];
+const thirdBottom = bottomContent.childNodes[5]
+
+firstBottom.children[0].textContent = siteContent["main-content"]["services-h4"];
+firstBottom.children[1].textContent = siteContent["main-content"]["services-content"];
+
+secondBottom.children[0].textContent = siteContent["main-content"]["product-h4"];
+secondBottom.children[1].textContent = siteContent["main-content"]["product-content"];
+
+thirdBottom.children[0].textContent = siteContent["main-content"]["vision-h4"];
+thirdBottom.children[1].textContent = siteContent["main-content"]["vision-content"];
+
+const contact = document.querySelector('.contact');
+console.log(contact.childNodes);
+
+let contactTitle = contact.childNodes[1];
+let address = contact.childNodes[3];
+let phone = contact.childNodes[5];
+let email = contact.childNodes[7];
+contactTitle.textContent = siteContent["contact"]["contact-h4"];
+address.textContent = siteContent["contact"]["address"];
+phone.textContent = siteContent["contact"]["phone"];
+email.textContent = siteContent["contact"]["email"];
 
 
-// console.log(topContent1);
-// console.log(topContent2);
+// const topC = document.querySelector('.top-content');
 
-topSecondCard = topC.childNodes[3]
-// console.log(topFirstCard);
+// const topFirstCard = topC.childNodes[1] // div text content
+// // console.log(topFirstCard)
+
+// const topContent1 = topFirstCard.children[0] // h4
+// // console.log(topContent1);
+// // .textContent logic in HERE
+// topContent1.textContent = siteContent["main-content"]["features-h4"];
+// // console.log(topFirstCard);
+
+// const topContent2 = topFirstCard.children[1]
+// topContent2.textContent = siteContent["main-content"]["features-content"]["features-content"];
+// // p
+// // ,textContent logic in HERE
+
+
+// // console.log(topContent1);
+// // console.log(topContent2);
+
+// topSecondCard = topC.childNodes[3]
+// // console.log(topFirstCard);
+// // console.log(topSecondCard);
+// topContent1.textContent = siteContent["main-content"]["features-h4"];
 // console.log(topSecondCard);
-topContent1.textContent = siteContent["main-content"]["features-h4"];
-console.log(topSecondCard);
 
 
-const middleImage = document.getElementById("middle-img");
-middleImage.setAttribute('src', siteContent['main-content']["middle-img-src"]);
-// console.log(middleImage);
+// const middleImage = document.getElementById("middle-img");
+// middleImage.setAttribute('src', siteContent['main-content']["middle-img-src"]);
+// // console.log(middleImage);
 
 
 
